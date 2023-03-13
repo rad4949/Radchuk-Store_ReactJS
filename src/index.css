@@ -16,9 +16,38 @@ body {
   margin: 30px auto;
 }
 
+header {
+  position: relative;
+}
+
 header .logo {
   font-weight: 600;
   font-size: 20px;
+}
+
+header .shop-cart-button {
+  float: right;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active {
+  color: red;
+  transform: scale(1.5);
+}
+
+header .shop-cart {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 450px;
+  min-height: 100px;
+  background: rgb(114, 188, 114);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  z-index: 1000;
 }
 
 header ul.nav {
@@ -44,17 +73,6 @@ header .presentation {
   height: 500px;
   background-size: cover;
   background-position: center center;
-}
-
-header .presentation::after {
-  content: "Найкращі спорядження для військових";
-  position: absolute;
-  top: 220px;
-  left: 250px;
-  width: 300px;
-  font-size: 40px;
-  font-weight: 600;
-  color: #f6f6f3;
 }
 
 main {
