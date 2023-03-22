@@ -16,18 +16,24 @@ body {
   margin: 30px auto;
 }
 
+.container {
+  max-width: 1280px;
+  margin: 0px auto;
+}
+
 header {
   position: relative;
 }
 
 header .logo {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 header .shop-cart-button {
   float: right;
   cursor: pointer;
+  font-size: 20px;
   transition: color, transform 500ms ease;
 }
 
@@ -82,6 +88,7 @@ header .shop-cart .item p {
 header ul.nav {
   float: right;
   list-style: none;
+  margin-right: 30px;
 }
 
 header ul.nav li {
@@ -115,6 +122,8 @@ main .item {
   width: 30%;
   background: lightgray;
   margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
   overflow: hidden;
   position: relative;
   padding-bottom: 20px;
@@ -152,7 +161,7 @@ main .add-to-cart {
   color: #fff;
   border-radius: 10px 10px 10px 10px;
   cursor: pointer;
-  font-weight: 600;
+  font-size: 40px;
   transition: transform 300ms ease;
 }
 main .add-to-cart:hover {
@@ -162,4 +171,168 @@ main .add-to-cart:hover {
 footer {
   text-align: center;
   margin-top: 10px;
+}
+
+@media (max-width: 990px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #f6f6f3;
+    color: #222;
+    font-family: "Gloock", serif;
+    font-weight: 300;
+  }
+
+  .container {
+    max-width: 600px;
+  }
+
+  header .logo {
+    font-weight: 600;
+    font-size: 40px;
+  }
+
+  header .shop-cart-button {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    transition: color, transform 500ms ease;
+  }
+
+  header ul.nav {
+    float: right;
+    list-style: none;
+    font-size: 30px;
+    margin-right: 20px;
+  }
+
+  main .item {
+    width: 45%;
+    background: lightgray;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  main h2 {
+    margin: 10px 20px;
+    color: #333;
+    font-weight: 600;
+    font-size: 45px;
+  }
+
+  main p,
+  main b {
+    margin: 10px 20px;
+    color: #333;
+    font-weight: 300;
+    font-size: 30px;
+  }
+
+  main .add-to-cart {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    background: #48bb34;
+    width: 120px;
+    height: 60px;
+    text-align: center;
+    line-height: 55px;
+    color: #fff;
+    border-radius: 20px 20px 20px 20px;
+    cursor: pointer;
+    font-size: 60px;
+    transition: transform 300ms ease;
+  }
+}
+@media (max-width: 610px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #f6f6f3;
+    color: #222;
+    font-family: "Gloock", serif;
+    font-weight: 300;
+  }
+
+  .container {
+    max-width: none;
+  }
+
+  header .logo {
+    font-weight: 600;
+    font-size: 50px;
+  }
+
+  header .shop-cart-button {
+    float: right;
+    cursor: pointer;
+    font-size: 40px;
+    transition: color, transform 500ms ease;
+  }
+
+  header .shop-cart-button {
+    float: right;
+    cursor: pointer;
+    font-size: 40px;
+    transition: color, transform 500ms ease;
+  }
+
+  header ul.nav {
+    float: right;
+    list-style: none;
+    font-size: 40px;
+    margin-right: 40px;
+  }
+
+  main .item {
+    width: 95%;
+    background: lightgray;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  main h2 {
+    margin: 10px 20px;
+    color: #333;
+    font-weight: 600;
+    font-size: 80px;
+  }
+
+  main p,
+  main b {
+    margin: 10px 20px;
+    color: #333;
+    font-weight: 300;
+    font-size: 50px;
+  }
+
+  main .add-to-cart {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    background: #48bb34;
+    width: 240px;
+    height: 120px;
+    text-align: center;
+    line-height: 110px;
+    color: #fff;
+    border-radius: 30px 30px 30px 30px;
+    cursor: pointer;
+    font-size: 160px;
+    transition: transform 300ms ease;
+  }
 }

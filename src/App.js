@@ -59,7 +59,11 @@ class App extends React.Component {
     return (
       <div className="wrapper">
         <Header orders={this.state.orders} />
-        <Items items={this.state.items} onAdd={this.addToOrder} />
+        <Items
+          className="container"
+          items={this.state.items}
+          onAdd={this.addToOrder}
+        />
         <Footer />
       </div>
     );
