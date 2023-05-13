@@ -4,16 +4,36 @@ export class Categories extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        categories:[
-            {
-                key: "all",
-                
-            }
-        ]}
+      categories: [
+        {
+          key: "all",
+          name: "Всі",
+        },
+        {
+          key: "ketel",
+          name: "Кітелі",
+        },
+        {
+          key: "boots",
+          name: "Черевики",
+        },
+        {
+          key: "pants",
+          name: "Штани",
+        },
+      ],
     };
   }
   render() {
-    return <div>Categories</div>;
+    return (
+      <div className="categories">
+        {this.state.categories.map((el) => (
+          <div key={el.key} onClick={() => this.props.chooseCategory(el.key)}>
+            {el.name}
+          </div>
+        ))}
+      </div>
+    );
   }
 }
 
