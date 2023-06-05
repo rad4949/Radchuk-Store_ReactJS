@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Items from "./components/Items";
 import Categories from "./components/Categories";
 import ShowFullItem from "./components/ShowFullItem";
+import database from "./database.json";
 
 class App extends React.Component {
   constructor(props) {
@@ -11,65 +12,18 @@ class App extends React.Component {
     this.state = {
       orders: [],
       currentItems: [],
-      items: [
-        {
-          id: 1,
-          title: "Кітель",
-          img: "1.jpg",
-          brand: "M-TAC",
-          category: "ketel",
-          price: 1700,
-        },
-        {
-          id: 2,
-          title: "Кітель",
-          img: "2.jpg",
-          brand: "STURM MIL-TEC",
-          category: "ketel",
-          price: 1550,
-        },
-        {
-          id: 3,
-          title: "Черевики тактичні",
-          img: "3.jpg",
-          brand: "ALLIGATOR",
-          category: "boots",
-          price: 2300,
-        },
-        {
-          id: 4,
-          title: "Черевики демисезонні",
-          img: "4.jpg",
-          brand: "LOWA",
-          category: "boots",
-          price: 4500,
-        },
-        {
-          id: 5,
-          title: "Тактичні штани",
-          img: "5.jpg",
-          brand: "M-TAC",
-          category: "pants",
-          price: 1200,
-        },
-        {
-          id: 6,
-          title: "Тактичні штани",
-          img: "6.jpg",
-          brand: "M-TAC",
-          category: "pants",
-          price: 1300,
-        },
-      ],
+      items: [],
       showFullItem: false,
       fullItem: {},
     };
+    this.state.items = database;
     this.state.currentItems = this.state.items;
     this.addToOrder = this.addToOrder.bind(this);
     this.deleteOrder = this.deleteOrder.bind(this);
     this.chooseCategory = this.chooseCategory.bind(this);
     this.onShowItem = this.onShowItem.bind(this);
   }
+
   render() {
     return (
       <div className="wrapper">
